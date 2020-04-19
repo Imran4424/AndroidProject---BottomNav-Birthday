@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.luminous.happybirthday.R;
+import com.luminous.happybirthday.ui.home.HomeFragment;
 
 public class NotificationsFragment extends Fragment {
 
@@ -30,6 +31,8 @@ public class NotificationsFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        HomeFragment.happyBirthdaySong.stop();
         return root;
     }
 }
