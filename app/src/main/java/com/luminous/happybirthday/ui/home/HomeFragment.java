@@ -28,6 +28,7 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         gifBirthdayView = (VideoView) root.findViewById(R.id.gifHappyBirthDay);
+        gifBirthdayView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.epictrailer);
 
 
         return root;
