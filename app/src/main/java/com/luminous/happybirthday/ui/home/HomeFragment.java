@@ -19,7 +19,6 @@ import com.luminous.happybirthday.R;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-    private VideoView gifBirthdayView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -27,10 +26,7 @@ public class HomeFragment extends Fragment {
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        gifBirthdayView = (VideoView) root.findViewById(R.id.gifHappyBirthDay);
         
-
-
         return root;
     }
 }
