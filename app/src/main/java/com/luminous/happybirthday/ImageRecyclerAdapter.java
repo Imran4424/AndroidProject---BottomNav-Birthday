@@ -1,6 +1,7 @@
 package com.luminous.happybirthday;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,19 +9,24 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class ImageRecyclerAdapter extends RecyclerView.Adapter<ImageRecyclerAdapter.ViewHolder> {
     private final Context context;
     private final LayoutInflater layoutInflater;
+    private final List<Image> images;
 
-    public ImageRecyclerAdapter(Context context, LayoutInflater layoutInflater) {
+    public ImageRecyclerAdapter(Context context, LayoutInflater layoutInflater, List<Image> images) {
         this.context = context;
-        this.layoutInflater = layoutInflater;
+        this.layoutInflater = LayoutInflater.from(context);
+        this.images = images;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View itemView =layoutInflater.inflate(R.layout.item_preview, parent, false);
+        return new ViewHolder(itemView);
     }
 
     @Override
