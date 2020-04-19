@@ -1,5 +1,6 @@
 package com.luminous.happybirthday.ui.home;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.luminous.happybirthday.R;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
+    private MediaPlayer happyBirthdaySong;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
