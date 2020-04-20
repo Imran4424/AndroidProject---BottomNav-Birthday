@@ -94,9 +94,20 @@ public class FullScreenImage extends AppCompatActivity {
 
         if(id == R.id.actionNext) {
             moveNext();
+        } else if(id == R.id.actionPrev) {
+            movePrevious();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void movePrevious() {
+        imagePosition--;
+
+        setImageViewResource();
+
+        // to search for invalid options menu
+        invalidateOptionsMenu();
     }
 
     private void moveNext() {
