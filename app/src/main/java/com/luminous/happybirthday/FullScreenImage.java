@@ -28,7 +28,24 @@ public class FullScreenImage extends AppCompatActivity {
             R.drawable.shai_10,
             R.drawable.shai_11,
             R.drawable.shai_12,
-            R.drawable.shai_13};
+            R.drawable.shai_13,
+            R.drawable.shai_14,
+            R.drawable.us_1,
+            R.drawable.us_2,
+            R.drawable.us_3,
+            R.drawable.us_4,
+            R.drawable.us_5,
+            R.drawable.us_6,
+            R.drawable.us_7,
+            R.drawable.us_8,
+            R.drawable.us_9,
+            R.drawable.us_10,
+            R.drawable.us_11,
+            R.drawable.us_12,
+            R.drawable.us_13,
+            R.drawable.us_14,
+            R.drawable.us_15,
+            R.drawable.us_16};
 
     private ZoomageView zoomImageView;
 
