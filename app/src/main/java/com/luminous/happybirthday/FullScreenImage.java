@@ -23,8 +23,8 @@ public class FullScreenImage extends AppCompatActivity {
             R.drawable.shai_5,
             R.drawable.shai_6};
 
-    private ImageView zoomImageView;
-    private ZoomageView zoomView;
+//    private ImageView zoomImageView;
+    private ZoomageView zoomImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,10 @@ public class FullScreenImage extends AppCompatActivity {
         setContentView(R.layout.activity_full_screen_image);
 
 //        zoomImageView = (ImageView) findViewById(R.id.zoomImageView);
-        zoomView = (ZoomageView) findViewById(R.id.zoomImageView);
+        zoomImageView = (ZoomageView) findViewById(R.id.zoomImageView);
+
+        // set bouncing false
+        zoomImageView.setRestrictBounds(true);
 
         Intent fullScreenIntent = getIntent();
         imagePosition = fullScreenIntent.getIntExtra(IMAGE_POSITION, POSITION_NOT_SET);
