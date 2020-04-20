@@ -1,5 +1,6 @@
 package com.luminous.happybirthday;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -31,6 +32,11 @@ public class FullScreenImage extends AppCompatActivity {
 
         Intent fullScreenIntent = getIntent();
         imagePosition = fullScreenIntent.getIntExtra(IMAGE_POSITION, POSITION_NOT_SET);
+
+        setImageViewResource();
+    }
+
+    private void setImageViewResource() {
         zoomImageView.setImageResource(imageResArray[imagePosition]);
     }
 
@@ -48,5 +54,22 @@ public class FullScreenImage extends AppCompatActivity {
         item.setEnabled(imagePosition < lastNoteIndex);
 
         return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.actionNext) {
+            moveNext();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void moveNext() {
+        imagePosition++;
+
+        setImageViewResource();
     }
 }
