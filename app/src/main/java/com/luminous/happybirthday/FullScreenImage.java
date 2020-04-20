@@ -78,9 +78,10 @@ public class FullScreenImage extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem item = menu.findItem(R.id.actionNext);
-        int lastNoteIndex = imageResArray.length - 1;
-        item.setEnabled(imagePosition < lastNoteIndex);
+        MenuItem next = menu.findItem(R.id.actionNext);
+        int firstImageIndex = 0;
+        int lastImageIndex = imageResArray.length - 1;
+        next.setEnabled(imagePosition < lastImageIndex);
 
         return super.onPrepareOptionsMenu(menu);
     }
