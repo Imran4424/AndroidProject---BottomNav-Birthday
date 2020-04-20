@@ -1,14 +1,12 @@
 package com.luminous.happybirthday;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -16,12 +14,13 @@ import java.util.List;
 public class ImageRecyclerAdapter extends RecyclerView.Adapter<ImageRecyclerAdapter.ViewHolder> {
     private final Context context;
     private final LayoutInflater layoutInflater;
-    private final List<ImageView> images;
+//    private final List<ImageView> imageResources;
+    private final List<Integer> imageResources;
 
-    public ImageRecyclerAdapter(Context context, LayoutInflater layoutInflater, List<ImageView> images) {
+    public ImageRecyclerAdapter(Context context, List<Integer> imageResources) {
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
-        this.images = images;
+        this.imageResources = imageResources;
     }
 
     @NonNull
@@ -33,12 +32,13 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ImageRecyclerAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageDrawable(images.get(position).getDrawable());
+//        holder.imageView.setImageDrawable(imageResources.get(position).getDrawable());
+        holder.imageView.setImageResource(imageResources.get(position));
     }
-    
+
     @Override
     public int getItemCount() {
-        return images.size();
+        return imageResources.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
