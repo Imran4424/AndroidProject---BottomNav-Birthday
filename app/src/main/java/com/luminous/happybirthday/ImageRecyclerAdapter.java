@@ -34,6 +34,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ImageRecyclerAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 //        holder.imageView.setImageDrawable(imageResources.get(position).getDrawable());
         holder.imageView.setImageResource(imageResources.get(position));
+        holder.currentPosition = position;
     }
 
     @Override
@@ -43,6 +44,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ImageRecyclerAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final ImageView imageView;
+        public int currentPosition;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
