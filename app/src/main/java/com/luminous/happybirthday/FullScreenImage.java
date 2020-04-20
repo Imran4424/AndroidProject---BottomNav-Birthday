@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 
 public class FullScreenImage extends AppCompatActivity {
     public static final String IMAGE_POSITION = "com.luminous.happybirthday.IMAGE_POSITION";
     public static final int POSITION_NOT_SET = -1;
+
+    private int imagePosition;
     private Integer[] imageResArray = new Integer[] {R.drawable.shai_1,
             R.drawable.shai_2,
             R.drawable.shai_3,
@@ -26,6 +30,23 @@ public class FullScreenImage extends AppCompatActivity {
         zoomImageView = (ImageView) findViewById(R.id.zoomImageView);
 
         Intent fullScreenIntent = getIntent();
-        zoomImageView.setImageResource(imageResArray[fullScreenIntent.getIntExtra(IMAGE_POSITION, POSITION_NOT_SET)]);
+        imagePosition = fullScreenIntent.getIntExtra(IMAGE_POSITION, POSITION_NOT_SET);
+        zoomImageView.setImageResource(imageResArray[imagePosition]);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_fullscreen, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem item = menu.findItem(R.id.actionNext);
+        int lastNoteIndex = imageResArray.length - 1;
+        item.setEnabled(imagePosition < lastNoteIndex);
+
+        return super.onPrepareOptionsMenu(menu);
     }
 }
