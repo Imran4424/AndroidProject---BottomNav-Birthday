@@ -32,10 +32,8 @@ public class HomeFragment extends Fragment {
         // creating media player in a fragment
         happyBirthdaySong = MediaPlayer.create(getActivity(), R.raw.happy_birthday_female);
         happyBirthdaySong.setLooping(true);
-        if(null == savedInstanceState) {
-             happyBirthdaySong.start();
-        }
-        
+        happyBirthdaySong.start();
+
         return root;
     }
 }
