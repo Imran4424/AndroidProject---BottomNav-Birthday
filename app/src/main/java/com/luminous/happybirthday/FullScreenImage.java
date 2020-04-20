@@ -23,7 +23,6 @@ public class FullScreenImage extends AppCompatActivity {
             R.drawable.shai_5,
             R.drawable.shai_6};
 
-//    private ImageView zoomImageView;
     private ZoomageView zoomImageView;
 
     @Override
@@ -31,7 +30,6 @@ public class FullScreenImage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_screen_image);
 
-//        zoomImageView = (ImageView) findViewById(R.id.zoomImageView);
         zoomImageView = (ZoomageView) findViewById(R.id.zoomImageView);
 
         // set bouncing false
