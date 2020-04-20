@@ -71,5 +71,8 @@ public class FullScreenImage extends AppCompatActivity {
         imagePosition++;
 
         setImageViewResource();
+
+        // to search for invalid options menu
+        invalidateOptionsMenu();
     }
 }
