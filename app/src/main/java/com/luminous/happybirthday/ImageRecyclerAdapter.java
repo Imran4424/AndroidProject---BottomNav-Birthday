@@ -1,6 +1,7 @@
 package com.luminous.happybirthday;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +50,15 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ImageRecyclerAdap
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.itemImage);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent fullScreenIntent = new Intent(context, FullScreenImage.class);
+                    fullScreenIntent.putExtra(FullScreenImage.IMAGE_POSITION, currentPosition);
+                    context.startActivity(fullScreenIntent);
+                }
+            });
         }
     }
 }
