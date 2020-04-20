@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.jsibbold.zoomage.ZoomageView;
+
 public class FullScreenImage extends AppCompatActivity {
     public static final String IMAGE_POSITION = "com.luminous.happybirthday.IMAGE_POSITION";
     public static final int POSITION_NOT_SET = -1;
@@ -22,13 +24,15 @@ public class FullScreenImage extends AppCompatActivity {
             R.drawable.shai_6};
 
     private ImageView zoomImageView;
+    private ZoomageView zoomView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_screen_image);
 
-        zoomImageView = (ImageView) findViewById(R.id.zoomImageView);
+//        zoomImageView = (ImageView) findViewById(R.id.zoomImageView);
+        zoomView = (ZoomageView) findViewById(R.id.zoomImageView);
 
         Intent fullScreenIntent = getIntent();
         imagePosition = fullScreenIntent.getIntExtra(IMAGE_POSITION, POSITION_NOT_SET);
