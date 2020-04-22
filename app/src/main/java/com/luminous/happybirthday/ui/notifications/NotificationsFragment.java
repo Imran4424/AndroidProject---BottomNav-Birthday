@@ -15,7 +15,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.luminous.happybirthday.R;
 import com.luminous.happybirthday.ui.home.HomeFragment;
-import com.marvinlabs.widget.slideshow.SlideShowView;
+
 
 public class NotificationsFragment extends Fragment {
 
@@ -28,7 +28,7 @@ public class NotificationsFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
 
-        SlideShowView slideShowView = (SlideShowView) root.findViewById(R.id.slideShow);
+
 
         HomeFragment.happyBirthdaySong.stop();
         return root;
