@@ -1,9 +1,11 @@
 package com.luminous.happybirthday.ui.notifications;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,7 +30,13 @@ public class NotificationsFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
 
+        ImageView slideShow = root.findViewById(R.id.slideShow);
+        AnimationDrawable animationDrawable = (AnimationDrawable) slideShow.getDrawable();
 
+        animationDrawable.setExitFadeDuration(1250);
+        animationDrawable.setEnterFadeDuration(1250);
+
+        animationDrawable.start();
 
         HomeFragment.happyBirthdaySong.stop();
         return root;
