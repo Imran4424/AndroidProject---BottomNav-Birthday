@@ -22,6 +22,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     public static MediaPlayer happyBirthdaySong;
+    public static boolean isPlaying = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,8 +34,12 @@ public class HomeFragment extends Fragment {
         // creating media player in a fragment
         happyBirthdaySong = MediaPlayer.create(getActivity(), R.raw.happy_birthday_female);
         happyBirthdaySong.setLooping(true);
+
         happyBirthdaySong.start();
+
+        //isPlaying = true;
 
         return root;
     }
+
 }

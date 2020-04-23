@@ -85,6 +85,7 @@ public class DashboardFragment extends Fragment {
         recyclerImages.setAdapter(imageRecyclerAdapter);
 
         HomeFragment.happyBirthdaySong.stop();
+        //HomeFragment.isPlaying = false;
         return root;
     }
 }

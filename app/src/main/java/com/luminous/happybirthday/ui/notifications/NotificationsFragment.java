@@ -45,6 +45,7 @@ public class NotificationsFragment extends Fragment {
         backgroundMusic.start();
 
         HomeFragment.happyBirthdaySong.stop();
+        //HomeFragment.isPlaying = false;
         return root;
     }
 
