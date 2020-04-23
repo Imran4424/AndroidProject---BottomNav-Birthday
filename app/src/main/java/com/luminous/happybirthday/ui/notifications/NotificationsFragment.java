@@ -38,7 +38,7 @@ public class NotificationsFragment extends Fragment {
         animationDrawable.setExitFadeDuration(1500);
         animationDrawable.setEnterFadeDuration(1500);
 
-        backgroundMusic = MediaPlayer.create(getActivity(), R.raw.happy_birthday_female);
+        backgroundMusic = MediaPlayer.create(getActivity(), R.raw.background);
         backgroundMusic.setLooping(true);
 
         animationDrawable.start();

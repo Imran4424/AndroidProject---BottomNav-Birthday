@@ -49,6 +49,6 @@
 
     <item
         android:drawable="@drawable/happy_2"
-        android:duration="6000" />
+        android:duration="8000" />
 
 </animation-list>
