@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@drawable/us_1"
-        android:duration="4000" />
+        android:drawable="@drawable/shai_11"
+        android:duration="6000" />
     <item
         android:drawable="@drawable/us_2"
         android:duration="4000" />
 
     <item
-        android:drawable="@drawable/us_3"
-        android:duration="4000" />
+        android:drawable="@drawable/us_1"
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_4"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_5"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_6"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_7"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_8"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_9"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_10"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_11"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_12"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_13"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_14"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_15"
-        android:duration="4000" />
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_16"
-        android:duration="4000" />
+        android:duration="6000" />
 </animation-list>
