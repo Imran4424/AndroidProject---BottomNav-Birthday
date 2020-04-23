@@ -4,11 +4,15 @@
         android:drawable="@drawable/shai_11"
         android:duration="6000" />
     <item
-        android:drawable="@drawable/us_2"
-        android:duration="4000" />
+        android:drawable="@drawable/quote_1"
+        android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_1"
+        android:duration="6000" />
+
+    <item
+        android:drawable="@drawable/quote_2"
         android:duration="6000" />
 
     <item
@@ -16,27 +20,15 @@
         android:duration="6000" />
 
     <item
-        android:drawable="@drawable/us_5"
+        android:drawable="@drawable/quote_3"
         android:duration="6000" />
 
     <item
-        android:drawable="@drawable/us_6"
+        android:drawable="@drawable/us_18"
         android:duration="6000" />
 
     <item
-        android:drawable="@drawable/us_7"
-        android:duration="6000" />
-
-    <item
-        android:drawable="@drawable/us_8"
-        android:duration="6000" />
-
-    <item
-        android:drawable="@drawable/us_9"
-        android:duration="6000" />
-
-    <item
-        android:drawable="@drawable/us_10"
+        android:drawable="@drawable/quote_4"
         android:duration="6000" />
 
     <item
@@ -44,22 +36,19 @@
         android:duration="6000" />
 
     <item
-        android:drawable="@drawable/us_12"
-        android:duration="6000" />
-
-    <item
-        android:drawable="@drawable/us_13"
-        android:duration="6000" />
-
-    <item
-        android:drawable="@drawable/us_14"
-        android:duration="6000" />
-
-    <item
-        android:drawable="@drawable/us_15"
+        android:drawable="@drawable/quote_5"
         android:duration="6000" />
 
     <item
         android:drawable="@drawable/us_16"
         android:duration="6000" />
+
+    <item
+        android:drawable="@drawable/quote_6"
+        android:duration="6000" />
+
+    <item
+        android:drawable="@drawable/happy_2"
+        android:duration="6000" />
+
 </animation-list>

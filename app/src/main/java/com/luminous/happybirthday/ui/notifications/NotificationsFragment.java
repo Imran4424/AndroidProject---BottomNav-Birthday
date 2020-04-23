@@ -1,6 +1,7 @@
 package com.luminous.happybirthday.ui.notifications;
 
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ import com.luminous.happybirthday.ui.home.HomeFragment;
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
+    private MediaPlayer backgroundMusic;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,12 +35,30 @@ public class NotificationsFragment extends Fragment {
         ImageView slideShow = root.findViewById(R.id.slideShow);
         AnimationDrawable animationDrawable = (AnimationDrawable) slideShow.getDrawable();
 
-        animationDrawable.setExitFadeDuration(1250);
-        animationDrawable.setEnterFadeDuration(1250);
+        animationDrawable.setExitFadeDuration(1500);
+        animationDrawable.setEnterFadeDuration(1500);
+
+        backgroundMusic = MediaPlayer.create(getActivity(), R.raw.happy_birthday_female);
+        backgroundMusic.setLooping(true);
 
         animationDrawable.start();
+        backgroundMusic.start();
 
         HomeFragment.happyBirthdaySong.stop();
         return root;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        backgroundMusic.stop();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        backgroundMusic.start();
     }
 }
