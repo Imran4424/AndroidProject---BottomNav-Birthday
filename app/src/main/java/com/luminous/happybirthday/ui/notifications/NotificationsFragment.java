@@ -35,8 +35,8 @@ public class NotificationsFragment extends Fragment {
         ImageView slideShow = root.findViewById(R.id.slideShow);
         AnimationDrawable animationDrawable = (AnimationDrawable) slideShow.getDrawable();
 
-        animationDrawable.setExitFadeDuration(1500);
-        animationDrawable.setEnterFadeDuration(1500);
+        animationDrawable.setExitFadeDuration(2000);
+        animationDrawable.setEnterFadeDuration(2000);
 
         backgroundMusic = MediaPlayer.create(getActivity(), R.raw.background);
         backgroundMusic.setLooping(true);
