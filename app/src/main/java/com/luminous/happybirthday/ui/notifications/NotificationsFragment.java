@@ -56,6 +56,7 @@ public class NotificationsFragment extends Fragment {
         backgroundMusic.stop();
     }
 
+
     @Override
     public void onResume() {
         super.onResume();
